@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/678545686614357117/6f3fb95303df43c8b957d611d81edde4/artifacts
+end_time: 1727784732202
+entry_point_name: ''
+experiment_id: '678545686614357117'
+lifecycle_stage: active
+run_id: 6f3fb95303df43c8b957d611d81edde4
+run_name: silent-conch-746
+run_uuid: 6f3fb95303df43c8b957d611d81edde4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1727784723440
+status: 3
+tags: []
+user_id: Balaji

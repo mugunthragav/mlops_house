@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/678545686614357117/758e05b3c7344112afc217c9cbc41184/artifacts
+end_time: 1727784690371
+entry_point_name: ''
+experiment_id: '678545686614357117'
+lifecycle_stage: active
+run_id: 758e05b3c7344112afc217c9cbc41184
+run_name: selective-midge-925
+run_uuid: 758e05b3c7344112afc217c9cbc41184
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1727784686753
+status: 3
+tags: []
+user_id: Balaji

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/678545686614357117/a8cea2c9d6b448f785b558c641c355f3/artifacts
+end_time: 1727783015689
+entry_point_name: ''
+experiment_id: '678545686614357117'
+lifecycle_stage: active
+run_id: a8cea2c9d6b448f785b558c641c355f3
+run_name: industrious-stag-11
+run_uuid: a8cea2c9d6b448f785b558c641c355f3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1727783013901
+status: 3
+tags: []
+user_id: Balaji

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/678545686614357117/6ae9f8984ed840f38d7a73f0ea085c60/artifacts
+end_time: 1727785558867
+entry_point_name: ''
+experiment_id: '678545686614357117'
+lifecycle_stage: active
+run_id: 6ae9f8984ed840f38d7a73f0ea085c60
+run_name: kindly-koi-871
+run_uuid: 6ae9f8984ed840f38d7a73f0ea085c60
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1727785552133
+status: 3
+tags: []
+user_id: Balaji

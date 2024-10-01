@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/678545686614357117/ccf6f44894c641968fb5d4f37654e084/artifacts
+end_time: 1727786940703
+entry_point_name: ''
+experiment_id: '678545686614357117'
+lifecycle_stage: active
+run_id: ccf6f44894c641968fb5d4f37654e084
+run_name: kindly-smelt-156
+run_uuid: ccf6f44894c641968fb5d4f37654e084
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1727786932668
+status: 3
+tags: []
+user_id: Balaji

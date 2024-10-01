@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/678545686614357117/dc2e94f54b6c4d71b32f51c90b5b9b58/artifacts
+end_time: 1727785538574
+entry_point_name: ''
+experiment_id: '678545686614357117'
+lifecycle_stage: active
+run_id: dc2e94f54b6c4d71b32f51c90b5b9b58
+run_name: resilient-moth-270
+run_uuid: dc2e94f54b6c4d71b32f51c90b5b9b58
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1727785534615
+status: 3
+tags: []
+user_id: Balaji
