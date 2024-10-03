@@ -35,4 +35,4 @@ Run tests for model training.
 Build and deploy the Docker containers (MLflow and Streamlit).
 
 The MLflow UI will be accessible at http://localhost:5000 for tracking models and their metrics.
-The Streamlit app will be available at http://localhost:8502 for predictions.
+The Streamlit app will be available at http://localhost:8502 for predictions and model serving.
