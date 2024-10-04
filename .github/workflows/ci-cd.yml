@@ -82,8 +82,28 @@ jobs:
       - name: Deploy containers
         run: docker-compose up -d
 
-      # Step 6: Display Local URLs
-      - name: Display Local URLs
+      # Step 6: Install Ngrok (for creating public URLs)
+      - name: Install Ngrok
         run: |
-          echo "MLflow UI can be accessed at: http://localhost:5000"
-          echo "Streamlit app can be accessed at: http://localhost:8502"
+          sudo apt-get update
+          sudo apt-get install -y unzip
+          curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null
+          echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list
+          sudo apt-get update && sudo apt-get install ngrok
+
+      # Step 7: Start Ngrok and expose MLflow UI
+      - name: Expose MLflow UI via Ngrok
+        run: ngrok http 5000 &
+
+      # Step 8: Expose Streamlit via Ngrok
+      - name: Expose Streamlit via Ngrok
+        run: ngrok http 8502 &
+
+      # Step 9: Display Ngrok public URLs
+      - name: Get Ngrok URLs
+        run: |
+          sleep 5
+          echo "MLflow UI public URL:"
+          curl --silent http://127.0.0.1:4040/api/tunnels | jq '.tunnels[0].public_url'
+          echo "Streamlit App public URL:"
+          curl --silent http://127.0.0.1:4040/api/tunnels | jq '.tunnels[1].public_url'
