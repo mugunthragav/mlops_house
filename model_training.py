@@ -11,7 +11,7 @@ mlflow.set_tracking_uri("http://localhost:5000")
 experiment_name = "House_Price_Prediction_Experiment"
 mlflow.set_experiment(experiment_name)
 
-# Instantiate the MLflow client
+# Initiate  the MLflow client
 client = MlflowClient()
 
 def load_data():
@@ -49,7 +49,7 @@ def train_all_models(data):
         rmse = mean_squared_error(y_test, predictions, squared=False)
 
         # Log model to MLflow
-        with mlflow.start_run(nested=True):  # Use nested=True to allow multiple runs under the same experiment
+        with mlflow.start_run(nested=True):
             mlflow.sklearn.log_model(model_instance, model_name)
             mlflow.log_params(parameters)
             mlflow.log_metric("rmse", rmse)

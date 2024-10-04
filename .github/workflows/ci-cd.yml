@@ -82,8 +82,30 @@ jobs:
       - name: Deploy containers
         run: docker-compose up -d
 
-      # Step 6: Display Local URLs
+      # Step 6: Wait for Services to Start
+      - name: Wait for Services to Start
+        run: |
+          echo "Waiting for services to start..."
+          sleep 15  # Adjust this based on how long your services take to start
+
+      # Step 7: Test Streamlit App Endpoint
+      - name: Test Streamlit App Endpoint
+        run: |
+          echo "Testing Streamlit App"
+          curl --fail http://localhost:8502/predict -X POST -H "Content-Type: application/json" -d '{"feature1": value1, "feature2": value2}' || echo "Streamlit App is not responding!"
+
+      # Step 8: Test MLflow UI
+      - name: Test MLflow UI
+        run: |
+          echo "Testing MLflow UI"
+          curl --fail http://localhost:5000/ || echo "MLflow UI is not responding!"
+
+      # Step 9: Display Local URLs
       - name: Display Local URLs
         run: |
           echo "MLflow UI can be accessed at: http://localhost:5000"
           echo "Streamlit app can be accessed at: http://localhost:8502"
+
+      # Step 10: Shutdown Docker Compose
+      - name: Shutdown Docker Compose
+        run: docker-compose down

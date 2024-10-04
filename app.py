@@ -34,7 +34,7 @@ def main():
     prefarea = st.selectbox("Preferred Area", ("Yes", "No"))
     furnishingstatus = st.selectbox("Furnishing Status", ("furnished", "semi-furnished", "unfurnished"))
 
-    # Convert categorical inputs to binary values (assuming one-hot encoding was done in preprocessing)
+    # Convert categorical inputs to binary values
     mainroad = 1 if mainroad == "Yes" else 0
     guestroom = 1 if guestroom == "Yes" else 0
     basement = 1 if basement == "Yes" else 0
@@ -42,7 +42,7 @@ def main():
     airconditioning = 1 if airconditioning == "Yes" else 0
     prefarea = 1 if prefarea == "Yes" else 0
 
-    # One-hot encode furnishing status (only 2 columns: semi-furnished, unfurnished)
+
     furnishingstatus_encoded = [0, 0]  # [semi-furnished, unfurnished]
     if furnishingstatus == "semi-furnished":
         furnishingstatus_encoded = [1, 0]
