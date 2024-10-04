@@ -2,7 +2,7 @@ import mlflow
 from mlflow.tracking import MlflowClient
 from model_training import train_all_models, load_data  # Import necessary functions
 
-mlflow.set_tracking_uri("http://localhost:5000")
+mlflow.set_tracking_uri("http://mlflow:5000")
 
 def promote_and_register_model():
     # Load the data

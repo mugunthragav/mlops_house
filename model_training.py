@@ -7,7 +7,7 @@ from models.models_config import models  # Import the models dictionary
 from mlflow.models import Model
 from mlflow.tracking import MlflowClient
 
-mlflow.set_tracking_uri("http://localhost:5000")
+mlflow.set_tracking_uri("http://mlflow:5000")
 experiment_name = "House_Price_Prediction_Experiment"
 mlflow.set_experiment(experiment_name)
 

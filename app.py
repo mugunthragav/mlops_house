@@ -3,7 +3,7 @@ import streamlit as st
 from model_training import train_all_models, load_data
 import pandas as pd
 
-mlflow.set_tracking_uri("http://localhost:5000")
+mlflow.set_tracking_uri("http://mlflow:5000")
 
 def load_model(model_name):
     # Load the model from the MLflow registry
